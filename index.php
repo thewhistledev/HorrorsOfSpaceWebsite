@@ -7,8 +7,8 @@ include 'library.php';
 //use library class
 $library = new Library();
 
-//get json data from url https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/?access_token=68366685e8b42ec9b5560a332282af50&appid=1353830 and parse it using parseJson function from library.php then retrieve player_count from array and store value in $playerCount variable.
-$playerCount = $library->parseJson($library->URLGet('https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/?access_token=68366685e8b42ec9b5560a332282af50&appid=1353830'))['response']['player_count'];
+//get json data from url https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/?access_token=urtoken&appid=1353830 and parse it using parseJson function from library.php then retrieve player_count from array and store value in $playerCount variable.
+$playerCount = $library->parseJson($library->URLGet('https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/?access_token=urtoken&appid=1353830'))['response']['player_count'];
 
 
 
