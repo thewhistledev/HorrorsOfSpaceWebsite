@@ -11,6 +11,7 @@ $library = new Library();
 $playerCount = $library->parseJson($library->URLGet('https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/?access_token=68366685e8b42ec9b5560a332282af50&appid=1353830'))['response']['player_count'];
 
 
+
 ?>
 
 
@@ -68,7 +69,7 @@ $playerCount = $library->parseJson($library->URLGet('https://api.steampowered.co
     </header>
     <section class="py-5">
         <div class="container text-center py-5">
-            <p class="mb-4" style="font-size: 1.6rem;"><span class="text-success"><strong><?php echo $playerCount; ?></strong></span>&nbsp;gamers currently playing Horrors of Space.</p><a href="https://unrealengine.com/"> <img class="m-3" src="/assets/img/products/HoS/unreal.png" width="64px"></a><a href="https://steampowered.com/"> <img class="m-3" src="/assets/img/products/HoS/steam.png" width="128px" style="filter: invert(100%);"></a>
+            <p class="mb-4" style="font-size: 1.6rem;"><span class="text-success"><strong><?php echo $playerCount; ?></strong></span>&nbsp;gamer<?php if($playerCount > 1) { echo("s"); } else if ($playerCount = 1) { echo(" is"); } else if ($playerCount = 0) { echo("s are"); } ?> currently playing Horrors of Space.</p><a href="https://unrealengine.com/"> <img class="m-3" src="/assets/img/products/HoS/unreal.png" width="64px"></a><a href="https://steampowered.com/"> <img class="m-3" src="/assets/img/products/HoS/steam.png" width="128px" style="filter: invert(100%);"></a>
         </div>
     </section>
     <section>
@@ -153,14 +154,14 @@ $playerCount = $library->parseJson($library->URLGet('https://api.steampowered.co
                             </div>
                         </div>
                     </div>
-                    <div class="col mb-4">
+                    <!--<div class="col mb-4">
                         <div class="card bg-info-light">
                             <div class="card-body text-center px-4 py-5 px-md-5">
                                 <p class="fw-bold text-info card-text mb-2">Fully Managed</p>
                                 <h5 class="fw-bold card-title mb-3">Lorem ipsum dolor sit&nbsp;nullam et quis ad cras porttitor</h5><button class="btn btn-info btn-sm" type="button">Learn more</button>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </div>
