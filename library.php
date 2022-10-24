@@ -39,7 +39,7 @@ class Library
     public function config()
     {
         $config = array(
-            'access_token' => '68366685e8b42ec9b5560a332282af50',
+            'access_token' => 'urtoken',
         );
         return $config;
     }
